@@ -55,7 +55,7 @@ const Index = () => {
             Discover Today's Top Albums
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Explore the hottest 100 albums trending right now. Your next favorite song is just a click away.
+            Explore the top 100 albums trending right now. Your next favorite song is just a click away.
           </p>
         </div>
 

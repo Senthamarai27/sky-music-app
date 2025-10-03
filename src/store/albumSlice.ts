@@ -27,7 +27,14 @@ interface AlbumState {
 const initialState: AlbumState = {
   albums: [],
   filteredAlbums: [],
-  favorites: JSON.parse(localStorage.getItem('skyMusicFavorites') || '[]'),
+  favorites: (() => {
+    if (typeof window === 'undefined') return [];
+    try {
+      return JSON.parse(localStorage.getItem('skyMusicFavorites') || '[]');
+    } catch {
+      return [];
+    }
+  })(),
   searchTerm: '',
   selectedCategory: 'All',
   categories: ['All'],
